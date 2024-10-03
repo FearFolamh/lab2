@@ -31,7 +31,5 @@ public class task4
             }
         }
         System.out.println(min);
-
-
     }
 }

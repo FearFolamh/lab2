@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class task2
 {
     public static void main(String[] args)
@@ -6,16 +8,17 @@ public class task2
         int[] b = new int[n];
         int[] a = new int[n];
         int k =0;
-        System.out.println("Массив b");
+        //System.out.println("Массив b");
         for (int i = 0; i < n; i++)
         {
             b[i] = (int) (Math.random() * (198)) - 99;
-            System.out.println(b[i]);
+            //System.out.println(b[i]);
             if (b[i] > 0) {
                 a[i] = b[i] * 5;
                 k++;
             }
         }
+        System.out.println("массив b: " + Arrays.toString(b));
         int[] c = new int[k];
         int counter_a = 0;
         int counter_c = 0;
@@ -28,9 +31,7 @@ public class task2
             }
             counter_a++;
         }
-        System.out.println("Массив c");
-        for(int i =0; i<k;i++)
-            System.out.println(c[i]);
+        System.out.println("массив c: " + Arrays.toString(c));
         for (int i = 0; i < c.length; i++) {
             int pos = i;
             int min = c[i];
@@ -46,8 +47,6 @@ public class task2
             //меняем местами наименьший с sortArr[i]
             c[i] = min;
         }
-        System.out.println("сорт Массив c");
-        for(int i =0; i<k;i++)
-            System.out.println(c[i]);
+        System.out.println("Оригинальный массив: " + Arrays.toString(c));
     }
 }
